@@ -1,5 +1,6 @@
 package com.example.mrsnack.mrsnack;
 
+import android.content.Intent;
 import android.support.v4.content.ContextCompat;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
@@ -42,10 +43,8 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-
-
         try {
-            Thread.sleep(5000);
+            Thread.sleep(10000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
@@ -112,7 +111,13 @@ public class MainActivity extends AppCompatActivity {
     protected void onStart() {
         super.onStart();
 
+    }
 
+    public void catigoryes(View v){
+
+        Intent intent = new Intent(this ,CatActivity.class);
+
+        startActivity(intent);
     }
 
 

@@ -3,8 +3,6 @@ package com.example.mrsnack.mrsnack.Adapters;
 import android.content.Context;
 import android.support.annotation.NonNull;
 import android.support.v4.view.PagerAdapter;
-import android.transition.Slide;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -18,20 +16,16 @@ import com.example.mrsnack.mrsnack.Modules.Product;
 import com.example.mrsnack.mrsnack.R;
 
 import java.util.ArrayList;
+import java.util.Random;
 
 public class SlideAdapter extends PagerAdapter {
     Context context;
     LayoutInflater inflater;
     ArrayList<Product> products;
 
+    Random rand = new Random();
 
-    public int[] imgs_lst = {
-            R.drawable.img_1,
-            R.drawable.img_2,
-            R.drawable.img_3,
-            R.drawable.img_4
-
-    };
+    public int[] imgs_lst;
     public String[] titles = {
             "Pop cake",
             "Choclate",
@@ -44,6 +38,9 @@ public class SlideAdapter extends PagerAdapter {
         this.context = context;
         this.products = products;
 
+
+
+
     }
 
     @Override
@@ -54,7 +51,6 @@ public class SlideAdapter extends PagerAdapter {
 
     @Override
     public boolean isViewFromObject(@NonNull View view, @NonNull Object o) {
-
 
         return (view ==(LinearLayout)o);
     }
@@ -79,10 +75,8 @@ public class SlideAdapter extends PagerAdapter {
 
 
 
-        Glide.with(context).load(products.get(position).getImage()).apply(options).into(slideImage);
+        Glide.with(context).load(products.get((products.size())-position-1).getImage()).apply(options).into(slideImage);
 
-        slideImage.setImageResource(imgs_lst[position]);
-        Log.d("position","the posis"+imgs_lst[position]);
         title.setText(titles[position]);
         container.addView(view);
         return view;

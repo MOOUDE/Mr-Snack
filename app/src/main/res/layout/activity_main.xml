@@ -83,6 +83,7 @@
 
         >
 <android.support.v7.widget.CardView
+    android:onClick="catigoryes"
     android:layout_margin="8dp"
     android:layout_weight="1"
     app:cardElevation="8dp"
@@ -97,6 +98,7 @@
            />
 </android.support.v7.widget.CardView>
         <android.support.v7.widget.CardView
+            android:onClick="catigoryes"
             android:layout_margin="5dp"
             android:layout_weight="1"
             android:layout_width="wrap_content"
@@ -112,6 +114,7 @@
            />
         </android.support.v7.widget.CardView>
         <android.support.v7.widget.CardView
+            android:onClick="catigoryes"
             android:layout_margin="5dp"
             android:layout_weight="1"
             app:cardElevation="8dp"

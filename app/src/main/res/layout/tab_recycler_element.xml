@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <android.support.v7.widget.CardView
+        android:padding="8dp"
+        android:layout_margin="8dp"
+        app:cardElevation="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+      <android.support.constraint.ConstraintLayout
+          android:orientation="vertical"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent">
+
+          <ImageView
+              android:id="@+id/tabImage"
+              android:layout_width="match_parent"
+              android:layout_height="200dp"
+              android:scaleType="centerCrop"
+              android:src="@drawable/img_1"
+              app:layout_constraintEnd_toEndOf="parent"
+              app:layout_constraintStart_toStartOf="parent" />
+
+
+
+          <TextView
+              android:id="@+id/snackPrice"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginStart="32dp"
+              android:layout_marginLeft="32dp"
+              android:layout_weight="1"
+              app:layout_constraintStart_toEndOf="@+id/snackName"
+              app:layout_constraintTop_toTopOf="@+id/snackName"
+              tools:text="6 NIS " />
+
+          <TextView
+              android:id="@+id/snackName"
+              android:layout_margin="8dp"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginStart="16dp"
+              android:layout_marginLeft="16dp"
+              android:layout_marginTop="16dp"
+              android:layout_weight="1"
+              app:layout_constraintStart_toStartOf="@+id/tabImage"
+              app:layout_constraintTop_toBottomOf="@+id/tabImage"
+              tools:text="Pop Cacke" />
+
+
+
+      </android.support.constraint.ConstraintLayout>
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>

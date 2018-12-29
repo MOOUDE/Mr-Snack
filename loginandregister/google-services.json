@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "685927740950",
+    "firebase_url": "https://mrsnack-6cd90.firebaseio.com",
+    "project_id": "mrsnack-6cd90",
+    "storage_bucket": "mrsnack-6cd90.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:685927740950:android:d3875d29bbfad7ea",
+        "android_client_info": {
+          "package_name": "com.example.mrsnack.loginandregister"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "685927740950-4dra2hh8fd7tjgcfg50ts1g41lh0be3c.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.mrsnack.mrsnack",
+            "certificate_hash": "604685e3727dfb50f4f3255a626e4b441a5767af"
+          }
+        },
+        {
+          "client_id": "685927740950-2kl4qpe343t796ktujrapbhg4l09vhoa.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCFU9zPXmagfKy8hKa3Y1HEKkY-PGcr34c"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "685927740950-2kl4qpe343t796ktujrapbhg4l09vhoa.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

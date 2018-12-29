@@ -24,6 +24,8 @@ public class MainRecyclerViewAdapter extends RecyclerView.Adapter<MainRecyclerVi
 
     private Context context;
     private ArrayList<Product> product;
+    public static final String NAME = "name";
+    public static final String IMAGE = "image";
 
     public MainRecyclerViewAdapter(Context context, ArrayList<Product> product) {
         this.context = context;
@@ -64,7 +66,8 @@ public class MainRecyclerViewAdapter extends RecyclerView.Adapter<MainRecyclerVi
             public void onClick(View v, int position) {
                 Intent intent = new Intent(context , ProductDetalis.class);
 
-                intent.putExtra( "name",product.get(position).getName());
+                intent.putExtra( NAME,product.get(position).getName());
+                intent.putExtra( IMAGE,product.get(position).getImage());
 
                 context.startActivity(intent);
             }
