@@ -6,6 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@android:color/white"
+    android:id="@+id/product_activity_Layout"
     android:fitsSystemWindows="true">
 
     <android.support.design.widget.AppBarLayout
@@ -69,7 +70,7 @@
         android:layout_margin="@dimen/fab_margin"
         android:clickable="true"
         android:src="@drawable/ic_favorite_border_black_70dp"
-        app:backgroundTint="#279AF1"
+        app:backgroundTint="@color/colorAccentLight"
         app:fabSize="normal"
         app:layout_anchor="@+id/appbar"
         app:layout_anchorGravity="bottom|right|end"/>
@@ -119,6 +120,7 @@
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/fab_margin"
         android:clickable="true"
+        android:onClick="increaseAmount"
         android:src="@drawable/ic_add_black_24dp"
         app:backgroundTint="@color/gray"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -139,6 +141,7 @@
         android:layout_marginRight="8dp"
         android:layout_marginBottom="8dp"
         android:clickable="true"
+        android:onClick="decreaseAmount"
         android:src="@drawable/ic_remove_black_24dp"
         app:backgroundTint="@color/gray"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -155,8 +158,9 @@
         android:layout_marginLeft="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
-        android:text="10"
+        tools:text="10"
         android:textSize="20sp"
+        android:id="@+id/amount"
         app:layout_constraintBottom_toBottomOf="@+id/floatingActionButton3"
         app:layout_constraintEnd_toStartOf="@+id/floatingActionButton"
         app:layout_constraintStart_toEndOf="@+id/floatingActionButton3"
@@ -168,7 +172,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
-        android:text="20 nis"
+        tools:text="20 nis"
         app:layout_constraintStart_toEndOf="@+id/wightText"
         app:layout_constraintTop_toTopOf="@+id/wightText"
         tools:ignore="MissingConstraints" />
@@ -176,7 +180,16 @@
 
 
 </android.support.constraint.ConstraintLayout>
-
+<Button
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:layout_gravity="bottom"
+    android:text="@string/OrderString"
+    android:textSize="20sp"
+    android:textColor="@android:color/white"
+    android:background="@color/colorAccent"
+    android:onClick="onOrder"
+    />
 
 
 </android.support.design.widget.CoordinatorLayout>

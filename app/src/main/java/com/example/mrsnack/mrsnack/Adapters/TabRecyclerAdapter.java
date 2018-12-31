@@ -17,13 +17,11 @@ import com.example.mrsnack.mrsnack.R;
 
 import java.util.ArrayList;
 
-import static com.example.mrsnack.mrsnack.Adapters.MainRecyclerViewAdapter.IMAGE;
-import static com.example.mrsnack.mrsnack.Adapters.MainRecyclerViewAdapter.NAME;
-
 public class TabRecyclerAdapter extends RecyclerView.Adapter<TabRecyclerAdapter.TabsRecyclerViewHolder>{
 
     private Context context;
     private ArrayList<Product> products;
+    public static final String PRODUCTS = "product";
 
     public TabRecyclerAdapter(Context context , ArrayList<Product> products){
         this.context = context;
@@ -59,8 +57,7 @@ public class TabRecyclerAdapter extends RecyclerView.Adapter<TabRecyclerAdapter.
             public void onClick(View v, int position) {
                 Intent intent = new Intent(context , ProductDetalis.class);
 
-                intent.putExtra( NAME,products.get(position).getName());
-                intent.putExtra( IMAGE,products.get(position).getImage());
+                intent.putExtra(PRODUCTS,products.get(position));
 
                 context.startActivity(intent);
             }

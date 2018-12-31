@@ -81,13 +81,7 @@ public class ItemsAdapter {
 
         });
 
-
-
-
-
         /*************/
-
-
 
     }
     public ArrayList<Product> getProducts(){
