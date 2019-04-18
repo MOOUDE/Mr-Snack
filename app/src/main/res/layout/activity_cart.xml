@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UI.Cart"
+
+    >
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/gray"
+        android:fitsSystemWindows="true"
+        android:elevation="8dp"
+        >
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            app:cardElevation="8dp"
+            android:layout_height="wrap_content">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_width="match_parent"
+                app:layout_collapseMode="pin"
+                android:layout_height="match_parent"
+                android:layout_gravity="bottom">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@string/cartString"
+                    android:gravity="center"
+                    android:textColor="@color/colorAccentLight"
+                    android:textSize="20sp"
+                    />
+            </android.support.v7.widget.Toolbar>
+
+        </android.support.v7.widget.CardView>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/cartRecyclerView"
+        android:layout_marginBottom="60dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        tools:itemCount="31">
+
+
+    </android.support.v7.widget.RecyclerView>
+
+    <Button
+
+        android:id="@+id/totalBtn"
+        android:background="@color/colorAccentLight"
+        android:layout_gravity="bottom"
+        android:textColor="@android:color/white"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        tools:text="Total 220 NIS"
+        android:clickable="true"
+        android:focusable="true"
+        android:elevation="8dp"
+        />
+
+    <Button
+
+        android:id="@+id/locationbtn"
+        android:background="@color/colorPrimary"
+        android:layout_gravity="bottom"
+        android:textColor="@android:color/white"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="@string/locationNotOn"
+        android:clickable="true"
+        android:focusable="true"
+        android:elevation="8dp"
+        android:visibility="gone"
+        />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/delFab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|start"
+        android:layout_marginStart="@dimen/fab_margin"
+        android:layout_marginBottom="@dimen/fab_TopMargin"
+        android:theme="@style/RedProgress"
+        app:srcCompat="@drawable/delete"
+        tools:ignore="VectorDrawableCompat"
+        android:layout_marginEnd="@dimen/fab_margin" />
+
+
+</android.support.design.widget.CoordinatorLayout>

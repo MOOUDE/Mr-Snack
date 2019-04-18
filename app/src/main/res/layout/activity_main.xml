@@ -6,8 +6,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
     android:background="@color/light_gray"
-    tools:context=".MainActivity">
+    tools:context=".UI.MainActivity">
 
+    <ProgressBar
+        android:theme="@style/RedProgress"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/progress"
+        android:visibility="visible"
+        />
     <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="50dp"
@@ -33,10 +40,10 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="Mr Snack App "
-            android:gravity="center_vertical"
+            android:text="@string/app_name"
+            android:gravity="center"
             android:textColor="@android:color/black"
-            android:textSize="16sp"
+            android:textSize="20sp"
             />
     </android.support.v7.widget.Toolbar>
 
@@ -76,20 +83,23 @@
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/centerLinear"
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="120dp"
         android:gravity="center"
+        android:visibility="gone"
 
         >
 <android.support.v7.widget.CardView
-    android:onClick="catigoryes"
+    android:id="@+id/drinksChoice"
     android:layout_margin="8dp"
-    android:layout_weight="1"
+    android:layout_weight="3"
     app:cardElevation="8dp"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content">
        <ImageView
+           android:contentDescription="@string/drinds"
            android:layout_margin="5dp"
            android:layout_width="match_parent"
            android:layout_height="wrap_content"
@@ -98,13 +108,14 @@
            />
 </android.support.v7.widget.CardView>
         <android.support.v7.widget.CardView
-            android:onClick="catigoryes"
+            android:id="@+id/sweetChoice"
             android:layout_margin="5dp"
-            android:layout_weight="1"
+            android:layout_weight="3"
             android:layout_width="wrap_content"
             app:cardElevation="8dp"
             android:layout_height="wrap_content">
        <ImageView
+           android:contentDescription="@string/sweets"
            android:layout_margin="5dp"
            android:layout_width="match_parent"
            android:layout_height="wrap_content"
@@ -114,13 +125,14 @@
            />
         </android.support.v7.widget.CardView>
         <android.support.v7.widget.CardView
-            android:onClick="catigoryes"
+            android:id="@+id/saltyChoice"
             android:layout_margin="5dp"
-            android:layout_weight="1"
+            android:layout_weight="3"
             app:cardElevation="8dp"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content">
        <ImageView
+           android:contentDescription="@string/salts"
            android:layout_margin="5dp"
            android:layout_width="match_parent"
            android:layout_height="wrap_content"
@@ -139,6 +151,7 @@
         android:background="#F0F0F0"/>
 
     <android.support.v7.widget.RecyclerView
+        android:visibility="gone"
         android:id="@+id/main_recyclerview"
         android:layout_width="match_parent"
         android:layout_height="match_parent"

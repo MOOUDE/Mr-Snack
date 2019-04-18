@@ -1,0 +1,60 @@
+<LinearLayout
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/gray"
+
+    android:padding="@dimen/widget_margin">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/wantOrder"
+        android:textSize="20sp"
+        android:gravity="center"
+        android:layout_margin="20dp"
+        android:textColor="@android:color/black"
+        android:background="@drawable/border"
+        />
+
+    <LinearLayout
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:contentDescription="@string/drinks"
+            android:id="@+id/drinksCircular"
+            android:layout_width="@dimen/circularHeight"
+            android:layout_height="@dimen/circularWidth"
+            android:src="@drawable/img_1"
+            android:layout_margin="@dimen/circularMargin"
+            />
+
+        <ImageView
+            android:contentDescription="@string/sweets"
+            android:id="@+id/sweetsCircular"
+            android:layout_width="@dimen/circularHeight"
+            android:layout_height="@dimen/circularWidth"
+            android:src="@drawable/img_2"
+            android:layout_margin="@dimen/circularMargin"
+
+            />
+
+        <ImageView
+            android:contentDescription="@string/salts"
+            android:id="@+id/saltyCircular"
+            android:layout_width="@dimen/circularHeight"
+            android:layout_height="@dimen/circularWidth"
+            android:src="@drawable/img_3"
+            android:layout_margin="@dimen/circularMargin"
+
+            />
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

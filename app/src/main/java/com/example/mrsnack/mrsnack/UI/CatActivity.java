@@ -1,5 +1,6 @@
 package com.example.mrsnack.mrsnack;
 
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.design.widget.TabLayout;
@@ -85,8 +86,12 @@ public class CatActivity extends AppCompatActivity implements
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+
+                Intent intent = new Intent(getApplicationContext() , Cart.class);
+
+                startActivity(intent);
+
+
             }
         });
 
@@ -180,6 +185,9 @@ public class CatActivity extends AppCompatActivity implements
                         drinksArray.clear();
                         sweetsArray.clear();
                         saltsArray.clear();
+
+
+
                         //iterating through all the nodes
                         for (DataSnapshot postSnapshot : dataSnapshot.getChildren()) {
                             //getting artist
@@ -221,6 +229,8 @@ public class CatActivity extends AppCompatActivity implements
 
         mSectionsPagerAdapter = new SectionsPagerAdapter(getSupportFragmentManager());
 
+        mSectionsPagerAdapter.getItem(getIntent().getIntExtra("choice",0));
+
         // Set up the ViewPager with the sections adapter.
         mViewPager = (ViewPager) findViewById(R.id.container);
         mViewPager.setAdapter(mSectionsPagerAdapter);
@@ -234,6 +244,7 @@ public class CatActivity extends AppCompatActivity implements
         setDrinksArray(drinksArray);
         setSaltsArray(saltsArray);
         setSweetsArray(sweetsArray);
+
 
     }
 

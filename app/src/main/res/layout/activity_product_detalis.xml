@@ -17,6 +17,7 @@
         android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
 
         <android.support.design.widget.CollapsingToolbarLayout
+            android:background="@android:color/white"
             android:id="@+id/collapsing_toolbar"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -26,10 +27,11 @@
             app:layout_scrollFlags="scroll|exitUntilCollapsed|snap">
 
             <ImageView
+                android:contentDescription="@string/SnackImage"
                 android:id="@+id/header"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@drawable/img_2"
+                android:background="@drawable/loading"
                 android:fitsSystemWindows="true"
                 android:scaleType="centerCrop"
                 app:layout_collapseMode="parallax"/>
@@ -64,16 +66,7 @@
     </android.support.design.widget.AppBarLayout>
 
 
-    <android.support.design.widget.FloatingActionButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="@dimen/fab_margin"
-        android:clickable="true"
-        android:src="@drawable/ic_favorite_border_black_70dp"
-        app:backgroundTint="@color/colorAccentLight"
-        app:fabSize="normal"
-        app:layout_anchor="@+id/appbar"
-        app:layout_anchorGravity="bottom|right|end"/>
+
 
 <android.support.constraint.ConstraintLayout
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
@@ -87,20 +80,24 @@
         android:layout_marginStart="24dp"
         android:layout_marginLeft="24dp"
         android:layout_marginTop="24dp"
-        android:text="Wight For Unit : "
+        android:text="@string/wightText"
+        android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/wightText" />
 
     <TextView
-        android:id="@+id/price"
+        android:id="@+id/wight"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
-        android:text="200 gm"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/price"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/textView"
         app:layout_constraintTop_toTopOf="@+id/textView"
-        tools:ignore="MissingConstraints" />
+        tools:ignore="MissingConstraints"
+        tools:text="200 gm" />
 
     <TextView
         android:id="@+id/wightText"
@@ -109,7 +106,8 @@
         android:layout_marginStart="24dp"
         android:layout_marginLeft="24dp"
         android:layout_marginTop="48dp"
-        android:text="Price Per Unit : "
+        android:text="@string/priceText"
+        android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -120,6 +118,7 @@
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/fab_margin"
         android:clickable="true"
+        android:focusable="true"
         android:onClick="increaseAmount"
         android:src="@drawable/ic_add_black_24dp"
         app:backgroundTint="@color/gray"
@@ -141,6 +140,7 @@
         android:layout_marginRight="8dp"
         android:layout_marginBottom="8dp"
         android:clickable="true"
+        android:focusable="true"
         android:onClick="decreaseAmount"
         android:src="@drawable/ic_remove_black_24dp"
         app:backgroundTint="@color/gray"
@@ -167,12 +167,13 @@
         app:layout_constraintTop_toTopOf="@+id/floatingActionButton3" />
 
     <TextView
-        android:id="@+id/wight"
+        android:id="@+id/price"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
         tools:text="20 nis"
+        android:textSize="20sp"
         app:layout_constraintStart_toEndOf="@+id/wightText"
         app:layout_constraintTop_toTopOf="@+id/wightText"
         tools:ignore="MissingConstraints" />
